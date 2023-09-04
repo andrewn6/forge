@@ -10,7 +10,6 @@ edition = "2021"
 reqwest = { version = "0.11", features = ["json"] } 
 hyper = { version = "0.14", features = ["full"] }
 tokio = { version = "1", features=["full"] }
-models = { path = "../../models" }
 chrono = "0.4"
 hmac = "0.12.1"
 hex = "0.4.3"
