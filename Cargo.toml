@@ -1,0 +1,37 @@
+[package]
+name = "nixbuilder"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json"] } 
+hyper = { version = "0.14", features = ["full"] }
+tokio = { version = "1", features=["full"] }
+models = { path = "../../models" }
+chrono = "0.4"
+hmac = "0.12.1"
+hex = "0.4.3"
+git2 = "0.17.2"
+crypto-mac = "0.11.1"
+sha2 = "0.10.6"
+serde = { version = "1.0.160", features = ["derive"] }
+serde_json = "1.0.96"
+uuid = "1.3.3"
+dotenv = "0.15.0"
+nixpacks = "1.9.0"
+futures = "0.3.28"
+dotenv_codegen = "0.15.0"
+tokio-postgres = "0.7.8"
+shiplift = "0.7.0"
+colored = "2.0.0"
+tempfile = "3.6.0"
+tracing = "0.1.37"
+tracing-subscriber = "0.3.17"
+chrono-tz = "0.5.3"
+clickhouse-rs = "1.0.0-alpha.1"
+rdkafka = "0.33.0"
+serde_urlencoded = "0.7.1"
+sqlx = { version = "0.6.3", features = ["runtime-tokio-rustls", "postgres", "time"] }
