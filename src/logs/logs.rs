@@ -45,7 +45,7 @@ pub async fn get_logs(container_id: &str, filter: LogFilter, tx: broadcast::Send
     let options = LogsOptions::builder().stdout(true).stderr(true).build();
     let mut logs_stream = container.logs(&options);
 
-    let pool = Pool::new("tcp://clickhouse:9000");
+    let pool = Pool::new("tcp://clickhouse:8123");
 
     let duration_in_millis = Duration::from_secs(5).as_millis().to_string();
 
