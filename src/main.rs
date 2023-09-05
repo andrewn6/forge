@@ -81,6 +81,8 @@ fn convert_to_nixpacks_options(local_options: &DockerBuilderOptions) -> Nixpacks
         no_error_without_start: local_options.no_error_without_start,
         incremental_cache_image: local_options.incremental_cache_image.clone(),
         verbose: local_options.verbose,
+    	cpu_quota: todo!(),
+    	memory: todo!(),
     }
 }
 
