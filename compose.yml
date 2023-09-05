@@ -19,13 +19,25 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     networks:
       - nixbuilder
-      
+
   clickhouse:
     image: clickhouse/clickhouse-server
     container_name: clickhouse
     ports:
       - "8123:8123"
       - "9000:9000"
+    networks:
+      - nixbuilder
+
+    
+  crdb:
+    image: cockroachdb/cockroach:latest
+    ports:
+     - "26257:26257"
+     - "8085:8085"
+    command: start-single-node --insecure
+    volumes:
+     - "${PWD}/cockroach-data/crdb:/cockroach/cockroach-data"
     networks:
       - nixbuilder
 

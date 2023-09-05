@@ -97,8 +97,7 @@ async fn handle(req: Request<Body>, db_pool: Arc<PgPool>) -> Result<Response<Bod
 			}
 			</style>
 			<body>
-			<h1>Builder Server</h1>
-			<p>This is the builder service for Infralink, it uses nixpacks to build and create a docker image out of a repository/local path./p>
+			<h1>nixbuilder</h1>
 
 			<h2>API</h2>
 			<p>/build</p>
@@ -223,6 +222,7 @@ async fn handle(req: Request<Body>, db_pool: Arc<PgPool>) -> Result<Response<Bod
 				&nixpack_options,
 			).await;
 
+            /* need to port  registry server from old repo(: 
 			let status = match result {
 				Ok(_) => {
 					let client = Client::new();
@@ -243,6 +243,7 @@ async fn handle(req: Request<Body>, db_pool: Arc<PgPool>) -> Result<Response<Bod
 				},
 				Err(_) => "Failed"
 			};
+            */
 
 			let end_time = Utc::now().to_rfc3339();
 			
