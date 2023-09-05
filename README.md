@@ -1,4 +1,4 @@
-# Nix builder
+# Forge
 
 Small service that uses [https://nixpacks.com](Nixpacks) to create docker images from git repositories or local paths.
 
